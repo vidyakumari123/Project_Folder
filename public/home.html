@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-M3r2A33GY6VofXZWJZ+xyuWLMT2bDwzBgLUKJgZSg5r+gC9VMYN8IdM9DtXMn3ZuG3qKbNS3dQoFgW5R4Xf23g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+    
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg  bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">JSPIDERS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/course">Course</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/register">Register</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!-- <h1>WELCOME TO JSPIDER</h1> -->
+    <div class="container">
+        <div class="image-container">
+            <img src="/jsp" alt="">
+        </div>
+    
+        <div class="content">
+            <h2 class="heading">Welcome to JSpiders</h2>
+            <p><strong>QSpiders</strong> is a best-in-class learning solutions organization headquartered in India’s IT capital, Bangalore. We offer a wide range of courses in the area of software testing and are official partners of the ISTQB®. A “finishing school” in many ways, the institute provides young job aspirants the perfect launch-pad to build a rewarding career in the growing IT sector. From its humble beginnings, QSpiders has exponentially grown to be the world’s largest software testing training organization spread across countries. At QSpiders, we ensure training is imparted by specialists with proven subject matter expertise and who have spent over a decade in their area of specialization. Our faculty are highly competent, skilled and dedicated to giving their best towards the professional development of our students. Besides training, we also provide placement assistance to our students and most of the big corporates in the corporate world hire our trained talent. It is indeed our pleasure to have placed over thousands of job-seekers in various IT firms across India over the years with an aim to place thousands more! Building competency into over 5000 students a month, QSpiders is where talent meets opportunity and we believe your search for the dream job or the dream professional ends here.</p>
+        </div>
+    </div>
+    
+    <div id="box" style="display: flex; justify-content: space-evenly; gap: 2rem;margin: 2rem;"></div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>About Us</h4>
+<p style="text-align: left;">Understanding the learner’s preference and level of expertise
+Meet the learner’s expectations by curating customized training courses
+Provide adequate and appropriate hands-on experience on real time projects</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="services-list">
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Placements</a></li>
+                        <li><a href="#">Offers</a></li>
+                        <!-- <li><a href="#"></a></li> -->
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Privacy Policy</h4>
+                    <ul class="d-flex">
+                        <li><a href="#">Privacy Statement</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Affiliate Program</h4>
+                    <p>Join our affiliate program and earn rewards for referring customers to us!</p>
+                    <a href="#" class="btn">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+                <!-- <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul class="d-flex ">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div> -->
+                <!-- <div class="footer-col">
+                    <h4>online shop</h4>
+                    <ul class="d-flex ">
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div> -->
+                <!-- <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+   </footer>
+
+
+
+    <script>
+        let box=document.getElementById('box')
+        let gloArr=[]
+
+        function printCards(){
+            fetch('/get').then(data=>{return data.json()}).then(item=>{
+                (console.log(item))
+                gloArr=item
+                template()
+            }).catch(err=>{console.log(err)})
+        }
+        printCards()
+
+        function template(){
+            let temp=''
+            gloArr.map(data=>{
+                temp+=`<div style="border:1px solid black; padding:5px; background-color:#040D12;color:white;border-radius:12px">
+                    <h3>${data.CouseName}</h3>
+                    <p>Understanding the learner’s preference and level of expertise Meet the learner’s expectations by curating customized training courses Provide adequate and appropriate hands-on experience on real time projects</p>
+                    <h4>Price : ${data.Price}</h4>
+                    </div>`
+            })
+
+            box.innerHTML=temp
+        }
+    </script>
+</body>
+</html>
